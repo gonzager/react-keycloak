@@ -2,19 +2,34 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
-import App from './App';
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from './reportWebVitals';
-import './index.css';
+import theme from './theme';
+import { RouterProvider } from 'react-router-dom';
+import router from './router';
+import { ReactKeycloakProvider } from '@react-keycloak/web';
+import keycloakInst from './app/auth/keycloak';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+//const initOptions = { onLoad: 'login-required' };
+const initOptions = { onLoad: 'check-sso' };
+
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <ReactKeycloakProvider authClient={keycloakInst} initOptions={initOptions}>
+    <React.StrictMode>
+      <Provider store={store}>
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <RouterProvider router={router} />
+        </ThemeProvider>
+      </Provider>
+      ,
+    </React.StrictMode>
+    ,
+  </ReactKeycloakProvider>,
 );
 
 // If you want to start measuring performance in your app, pass a function
