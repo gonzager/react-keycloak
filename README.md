@@ -78,5 +78,12 @@ Vienen además dos usuarios, uno para la consola de administrador (accesible des
 
 👮 **Usuario para la consola de admin:** admin // admin1234
 
-🚀 el real configurado dentro de keycloak se llama **fluxit** y el cliente se llama **front-flux-code-pkce**
+🚀 el realm configurado dentro de keycloak se llama **fluxit** y el cliente se llama **front-flux-code-pkce**
 
+![alt text](./assets/image.png)
+
+![alt text](./assets/image-1.png)
+
+![alt text](./assets/image-2.png)
+
+![alt text](./assets/image-3.png)
