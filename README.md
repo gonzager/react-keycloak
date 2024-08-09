@@ -80,6 +80,11 @@ Vienen además dos usuarios, uno para la consola de administrador (accesible des
 
 🚀 el realm configurado dentro de keycloak se llama **fluxit** y el cliente se llama **front-flux-code-pkce**
 
+El flujo de autenticación que tiene configurado el cliente dentro de Keycloak es CODE + PKCE, dejo link a la [RCF 7636[(https://datatracker.ietf.org/doc/html/rfc7636)]
+
+![alt text](./assets/pkce.png)
+|
+## Imagenes de Ejemplo
 ![alt text](./assets/image.png)
 
 ![alt text](./assets/image-1.png)
